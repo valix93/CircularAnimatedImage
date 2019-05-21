@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircularAnimatedImg">
+        <attr name="cai_progress" format="integer"/>
+        <attr name="cai_border" format="boolean"/>
+        <attr name="cai_border_width" format="dimension"/>
+        <attr name="cai_wave_color" format="color"/>
+        <attr name="cai_wave_amplitude" format="float"/>
+    </declare-styleable>
+
+</resources>
