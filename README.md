@@ -94,7 +94,8 @@ You must use the following properties in your XML to change your CircularAnimate
 -------
 
 ```java
-CircularAnimatedImg circularImgSplash = findViewById(R.id.circularImgSplash); //where circularImgSplash is your CircularAnimatedImg
+//circularImgSplash is your CircularAnimatedImg
+CircularAnimatedImg circularImgSplash = findViewById(R.id.circularImgSplash); 
 // Set Progress
 circularImgSplash.setProgress(100, progressMills, new Animator.AnimatorListener() { ... } )
 // Set Border Width
