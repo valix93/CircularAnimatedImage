@@ -11,7 +11,7 @@ Download the latest AAR from [JitPack][1] or grab via Gradle
 [![](https://jitpack.io/v/valix93/circularanimatedimage.svg)](https://jitpack.io/#valix93/circularanimatedimage)
 
 
-## Gradle
+### Gradle
 
 Add it in your root build.gradle at the end of repositories:
 
@@ -31,7 +31,7 @@ dependencies {
 }
   ```
 
-## Maven
+### Maven
 
 Add the JitPack repository to your build file
 
