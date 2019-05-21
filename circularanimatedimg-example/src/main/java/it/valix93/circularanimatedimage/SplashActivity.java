@@ -1,35 +1,44 @@
 package it.valix93.circularanimatedimage;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import it.valix93.circularanimatedimg.CircularAnimatedImgSplash;
+import it.valix93.circularanimatedimg.CircularAnimatedImg;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private CircularAnimatedImgSplash circularImgSplash;
-    Handler handler = new Handler();
+    private CircularAnimatedImg circularImgSplash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int progressMills = 3000;
-        int delayMills = progressMills;
         setContentView(R.layout.activity_splashscreen);
         circularImgSplash = findViewById(R.id.circularImgSplash);
-        circularImgSplash.setProgress(100,progressMills);
-        /* handler to start the MainActivity
-         * and close this Splash-Screen after some seconds.*/
-        handler.postDelayed(new Runnable(){
+        circularImgSplash.setProgress(100, progressMills, new Animator.AnimatorListener() {
             @Override
-            public void run() {
-                /* Create an Intent that will start the MainActivity. */
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
                 Intent mainIntent = new Intent(SplashActivity.this,MainActivity.class);
                 SplashActivity.this.startActivity(mainIntent);
                 SplashActivity.this.finish();
             }
-        }, delayMills);
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
     }
 }

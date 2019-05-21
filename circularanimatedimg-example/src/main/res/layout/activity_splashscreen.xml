@@ -14,7 +14,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <it.valix93.circularanimatedimg.CircularAnimatedImgSplash
+        <it.valix93.circularanimatedimg.CircularAnimatedImg
             android:id="@+id/circularImgSplash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

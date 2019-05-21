@@ -1,5 +1,6 @@
 package it.valix93.circularanimatedimg;
 
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -21,7 +22,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 
 
-public class CircularAnimatedImgSplash extends android.support.v7.widget.AppCompatImageView {
+public class CircularAnimatedImg extends android.support.v7.widget.AppCompatImageView {
     // Default values
     private static final float DEFAULT_AMPLITUDE_RATIO = 0.05f;
     private static final float DEFAULT_WATER_LEVEL_RATIO = 0.5f;
@@ -54,15 +55,15 @@ public class CircularAnimatedImgSplash extends android.support.v7.widget.AppComp
     private boolean firstLoadBitmap = true;
 
     //region Constructor & Init Method
-    public CircularAnimatedImgSplash(final Context context) {
+    public CircularAnimatedImg(final Context context) {
         this(context, null);
     }
 
-    public CircularAnimatedImgSplash(Context context, AttributeSet attrs) {
+    public CircularAnimatedImg(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CircularAnimatedImgSplash(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CircularAnimatedImg(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
@@ -375,12 +376,18 @@ public class CircularAnimatedImgSplash extends android.support.v7.widget.AppComp
     }
 
     public void setProgress(int progress, int milliseconds) {
+        setProgress(progress, milliseconds, null);
+    }
+
+    public void setProgress(int progress, int milliseconds, Animator.AnimatorListener animatorListener) {
         milliseconds += 600;
         // vertical animation.
         ObjectAnimator waterLevelAnim = ObjectAnimator.ofFloat(this, "waterLevelRatio", waterLevelRatio, 1f - ((float) progress / 100));
         waterLevelAnim.setDuration(milliseconds);
         waterLevelAnim.setInterpolator(new DecelerateInterpolator());
         AnimatorSet animatorSetProgress = new AnimatorSet();
+        if (animatorListener != null)
+            animatorSetProgress.addListener(animatorListener);
         animatorSetProgress.play(waterLevelAnim);
         animatorSetProgress.start();
     }
