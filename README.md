@@ -6,7 +6,7 @@ A circular loaders to be used for splashscreen
 Download
 --------
 
-Download the latest AAR from [JitPack][2] or grab via Gradle
+Download the latest AAR from [JitPack][1] or grab via Gradle
 
 [![](https://jitpack.io/v/valix93/circularanimatedimage.svg)](https://jitpack.io/#valix93/circularanimatedimage)
 
@@ -61,5 +61,4 @@ License
     Based on a work at https://github.com/lopspower/CircularFillableLoaders.
 
 
- [1]: http://square.github.io/picasso/
- [2]: https://jitpack.io/#valix93/circularanimatedimage
+ [1]: https://jitpack.io/#valix93/circularanimatedimage
