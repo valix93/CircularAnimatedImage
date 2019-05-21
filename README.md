@@ -57,9 +57,8 @@ Add the dependency
 License
 --------
 
-    CircularAnimatedImg by Valentina Lipari is licensed under a Apache License 2.0. 
-    Based on a work at [CircularFillableLoaders][2].
-
+CircularAnimatedImg by Valentina Lipari is licensed under a Apache License 2.0.
+Based on a work at [CircularFillableLoaders][2].
 
  [1]: https://jitpack.io/#valix93/circularanimatedimage
  [2]:https://github.com/lopspower/CircularFillableLoaders
