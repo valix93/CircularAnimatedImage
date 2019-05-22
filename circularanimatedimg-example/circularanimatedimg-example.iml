@@ -180,5 +180,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0@jar" level="project" />
     <orderEntry type="module" module-name="circularanimatedimg" />
     <orderEntry type="module" module-name="circularanimatedimg" />
+    <orderEntry type="module" module-name="circularanimatedimg" />
+    <orderEntry type="module" module-name="circularanimatedimg" />
   </component>
 </module>
