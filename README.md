@@ -12,7 +12,7 @@ Usage
 ### Download Library
 ---------
 
-To make a circular animated image add CircularAnimatedImg in your layout XML and add CircularAnimatedImage library in your project, ownload the latest AAR from [JitPack][1] or you can also grab it via Gradle:
+To make a circular animated image add CircularAnimatedImg in your layout XML and add CircularAnimatedImage library in your project, download the latest AAR from [JitPack][1] or you can also grab it via Gradle:
 
 [![](https://jitpack.io/v/valix93/circularanimatedimage.svg)](https://jitpack.io/#valix93/circularanimatedimage)
 
